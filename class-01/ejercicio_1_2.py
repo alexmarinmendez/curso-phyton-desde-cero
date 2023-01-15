@@ -8,7 +8,7 @@ numero_b = int(input("Ingrese otro número entero: "))
 suma = numero_a + numero_b
 resta = numero_a - numero_b
 multiplicacion = numero_a * numero_b
-division = numero_a / numero_b
+division = round(numero_a / numero_b, 2)
 
 print(f"La suma de ambos números es: {suma}")
 print(f"La resta de ambos números es: {resta}")
