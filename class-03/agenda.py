@@ -16,6 +16,8 @@ def comprobar_opcion(opcion):
     if opcion>=1 and opcion<=6:
         if opcion == 1:
             agregar_contacto()
+        elif opcion == 2:
+            eliminar_contacto()
         elif opcion == 4:
             mostrar_contactos()
     else:
@@ -27,6 +29,10 @@ def agregar_contacto():
     telefono = input("Número de teléfono: ")
     contactos[nombre] = {'Direccion': direccion, 'Telefono': telefono}
     print("Contacto guardado!")
+
+def eliminar_contacto():
+    nombre = input("Ingrese nombre del contacto que desea eliminar: ")
+    contactos.pop(nombre)
 
 def mostrar_contactos():
     print(contactos)
