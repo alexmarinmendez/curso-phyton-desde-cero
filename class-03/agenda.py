@@ -26,6 +26,8 @@ def comprobar_opcion(opcion):
             editar_contacto()
         elif opcion == 4:
             mostrar_contactos()
+        elif opcion == 5:
+            buscar_contacto()
     else:
         print("\nOpción incorrecta. Se espera un número entre 1 y 6\n")
 
@@ -49,14 +51,22 @@ def editar_contacto():
     print("Los datos del contacto seleccionado son:")
     print(contactos[nombre])
     clave_para_actualizar = input(("Qué información desea actualizar: "))
-    dato_para_actualizar = input(f"Cuál es el nuevo valor para esta '{clave_para_actualizar}': ")
+    dato_para_actualizar = input(f"Cuál es el nuevo valor para '{clave_para_actualizar}': ")
     contactos[nombre][clave_para_actualizar] = dato_para_actualizar
-    pass
+    print("Dato actualizado!\n")
 
 def mostrar_contactos():
     print("\nMostrando contactos...")
     print(contactos)
     print("Fin de la lista de contactos.\n")
+
+def buscar_contacto():
+    print("\nBuscando contacto...")
+    nombre = input("Ingrese nombre del contacto que desea buscar: ")
+    print("Contacto encontrado. Sus datos son:")
+    print(contactos[nombre])
+    print("Fin de la lista de datos de este contacto.\n")
+
 
 verificacion = False
 while not verificacion:
