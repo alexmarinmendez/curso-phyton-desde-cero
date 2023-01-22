@@ -16,10 +16,10 @@ def comprobar_opcion(opcion):
     if opcion>=1 and opcion<=6:
         if opcion == 1:
             agregar_contacto()
-        return True
+        elif opcion == 4:
+            mostrar_contactos()
     else:
         print("\nOpción incorrecta. Se espera un número entre 1 y 6\n")
-        return False
 
 def agregar_contacto():
     nombre = input("Nombre: ")
@@ -28,8 +28,12 @@ def agregar_contacto():
     contactos[nombre] = {'Direccion': direccion, 'Telefono': telefono}
     print("Contacto guardado!")
 
+def mostrar_contactos():
+    print(contactos)
+
 verificacion = False
 while not verificacion:
     mostrar_diccionario(menu)
     valor = int(input("Elija una opción: "))
-    verificacion = comprobar_opcion(valor)
+    comprobar_opcion(valor)
+    verificacion = (valor == 6)
