@@ -9,8 +9,12 @@ menu = {
 contactos = {}
 
 def mostrar_diccionario(diccionario: dict):
+    print("\n****************************")
+    print("*    AGENDA DE CONTACTOS   *")
+    print("****************************")
     for x, y in diccionario.items():
         print(f"{x}: {y}")
+    print("****************************")
 
 def comprobar_opcion(opcion):
     if opcion>=1 and opcion<=6:
@@ -18,24 +22,41 @@ def comprobar_opcion(opcion):
             agregar_contacto()
         elif opcion == 2:
             eliminar_contacto()
+        elif opcion == 3:
+            editar_contacto()
         elif opcion == 4:
             mostrar_contactos()
     else:
         print("\nOpción incorrecta. Se espera un número entre 1 y 6\n")
 
 def agregar_contacto():
+    print("\nAgregando un nuevo contacto...")
     nombre = input("Nombre: ")
     direccion = input("Dirección: ")
     telefono = input("Número de teléfono: ")
     contactos[nombre] = {'Direccion': direccion, 'Telefono': telefono}
-    print("Contacto guardado!")
+    print("Contacto guardado!\n")
 
 def eliminar_contacto():
+    print("\nEliminando un contacto...")
     nombre = input("Ingrese nombre del contacto que desea eliminar: ")
     contactos.pop(nombre)
+    print("Contacto eliminado!\n")
+
+def editar_contacto():
+    print("\nModificando los datos de un contacto...")
+    nombre = input("Ingrese nombre del contacto que desea modificar: ")
+    print("Los datos del contacto seleccionado son:")
+    print(contactos[nombre])
+    clave_para_actualizar = input(("Qué información desea actualizar: "))
+    dato_para_actualizar = input(f"Cuál es el nuevo valor para esta '{clave_para_actualizar}': ")
+    contactos[nombre][clave_para_actualizar] = dato_para_actualizar
+    pass
 
 def mostrar_contactos():
+    print("\nMostrando contactos...")
     print(contactos)
+    print("Fin de la lista de contactos.\n")
 
 verificacion = False
 while not verificacion:
