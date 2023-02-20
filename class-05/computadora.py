@@ -26,7 +26,7 @@ class Computadora:
 
     #Calcula precio con descuento
     def calcular_precio(self):
-        return (self.precio * self.dscto) / 100
+        return self.precio - ((self.precio * self.dscto) / 100)
 
     #Actualiza el stock (aumentándolo o disminuyéndolo según sea el parámetro)
     def set_stock(self, variabilidad):
