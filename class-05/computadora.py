@@ -14,7 +14,7 @@ class Computadora:
                 Almacenamiento: {self.tamano_disco} GB\n \
                 Precio: USD {self.precio}\n \
                 Stock: {self.stock} unidades\n \
-                Precio (con descuento): USD {self.calcular_precio}\n"
+                Precio (con descuento): USD {self.calcular_precio()}\n"
 
     #Asigna un nuevo precio (actualiza el precio)
     def set_precio(self, nuevo_precio):
