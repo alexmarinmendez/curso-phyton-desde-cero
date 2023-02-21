@@ -1,10 +1,23 @@
+import os
 from profesor import Profesor
 from programador import Programador
 
 class ProfesorProgramacion(Profesor, Programador):
-    def __init__(self, nombres: str, apellidos: str, dni: str, nacionalidad: str, cotizacion: float, cant_horas: int, stack: str, seniority: str):
+    def __init__(
+                self, 
+                nombres: str, 
+                apellidos: str, 
+                dni: str, 
+                nacionalidad: str, 
+                cotizacion: float, 
+                cant_horas: int, 
+                stack: str, 
+                seniority: str,
+                f_ingreso: str
+        ):
         Profesor.__init__(self, nombres, apellidos, dni, nacionalidad, cotizacion, cant_horas)
         Programador.__init__(self, nombres, apellidos, dni, nacionalidad, stack, seniority)
+        self.f_ingreso = f_ingreso
         
     def __str__(self):
         return f"Resumen de la Clase ProfesorProgramacion:\n \
@@ -18,7 +31,8 @@ class ProfesorProgramacion(Profesor, Programador):
                 Experiencia: {self.seniority}\n"
 
 if (__name__ == "__main__"):
+    os.system('cls')
     print("Módulo profesor_programacion")
         
-    profesor_programacion = ProfesorProgramacion("Alex", "Marin Mendez", "18205786", "Marciana", 51.2, 23, "Javascript", "Jr")
+    profesor_programacion = ProfesorProgramacion("Alex", "Marin Mendez", "18205786", "Marciana", 51.2, 23, "Javascript", "Jr", "hoy")
     print(profesor_programacion)
