@@ -1,4 +1,4 @@
-nac = ["Argentina", "Peruana", "Mexicana", "Otro"]
+# nac = ["Argentina", "Peruana", "Mexicana", "Otro"]
 
 class Persona:
     def __init__(
@@ -6,7 +6,7 @@ class Persona:
             nombres: str, 
             apellidos: str, 
             dni: str, 
-            nacionalidad: nac
+            nacionalidad: str
         ):
         self.nombres = nombres
         self.apellidos = apellidos

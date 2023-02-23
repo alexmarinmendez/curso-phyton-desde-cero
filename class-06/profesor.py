@@ -2,7 +2,8 @@ from persona import Persona
 
 class Profesor(Persona):
     def __init__(self, nombres: str, apellidos: str, dni: str, nacionalidad: str, cotizacion: float, cant_horas: int):
-        super().__init__(nombres, apellidos, dni, nacionalidad)
+        # super().__init__(nombres, apellidos, dni, nacionalidad)
+        Persona().__init__(self, nombres=nombres, apellidos=apellidos, dni=dni, nacionalidad=nacionalidad)
         self.cotizacion = cotizacion
         self.cant_horas = cant_horas
         

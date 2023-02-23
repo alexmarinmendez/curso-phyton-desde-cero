@@ -2,7 +2,8 @@ from persona import Persona
 
 class Programador(Persona):
     def __init__(self, nombres: str, apellidos: str, dni: str, nacionalidad: str, stack: str, seniority: str):
-        super().__init__(nombres, apellidos, dni, nacionalidad)
+        # super().__init__(nombres, apellidos, dni, nacionalidad)
+        Persona().__init__(self, nombres, apellidos, dni, nacionalidad)
         self.stack = stack
         self.seniority = seniority
         

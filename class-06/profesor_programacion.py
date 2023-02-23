@@ -34,5 +34,5 @@ if (__name__ == "__main__"):
     os.system('cls')
     print("Módulo profesor_programacion")
         
-    profesor_programacion = ProfesorProgramacion("Alex", "Marin Mendez", "18205786", "Marciana", 51.2, 23, "Javascript", "Jr", "hoy")
+    profesor_programacion = ProfesorProgramacion("Alex", "Marin Mendez", "18205786", "Marciana", cotizacion=51.2, cant_horas=23, stack="Javascript", seniority="Jr", f_ingreso="hoy")
     print(profesor_programacion)
