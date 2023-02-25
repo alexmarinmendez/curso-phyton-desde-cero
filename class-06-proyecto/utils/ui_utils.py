@@ -1,4 +1,11 @@
+from utils.crud_utils import agregar, eliminar, editar, mostrar, cargar_mock, buscar
+
 def mostrar_diccionario(diccionario: dict):
+    """Imprime el menú de opciones en consola
+
+    Args:
+        diccionario (dict): Diccionario con el menú de opciones
+    """
     for x, y in diccionario.items():
         print(f"  [{x}]: --> {y}")
     print("\n++++++++++++++++++++++++++++++++++++++++++")
@@ -6,17 +13,17 @@ def mostrar_diccionario(diccionario: dict):
 def comprobar_opcion(opcion):
     if opcion>=1 and opcion<=8:
         if opcion == 1:
-            pass
+            agregar()
         elif opcion == 2:
-            pass
+            eliminar()
         elif opcion == 3:
-            pass
+            editar()
         elif opcion == 4:
-            pass
+            mostrar()
         elif opcion == 5:
-            pass
+            cargar_mock()
         elif opcion == 6:
-            pass
+            buscar()
         elif opcion == 7:
             pass
     else:
