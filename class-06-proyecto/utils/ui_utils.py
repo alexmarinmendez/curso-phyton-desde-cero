@@ -4,7 +4,7 @@ def mostrar_diccionario(diccionario: dict):
     print("\n++++++++++++++++++++++++++++++++++++++++++")
 
 def comprobar_opcion(opcion):
-    if opcion>=1 and opcion<=7:
+    if opcion>=1 and opcion<=8:
         if opcion == 1:
             pass
         elif opcion == 2:
@@ -17,6 +17,8 @@ def comprobar_opcion(opcion):
             pass
         elif opcion == 6:
             pass
+        elif opcion == 7:
+            pass
     else:
-        print("\nOpción incorrecta. Se espera un número entre 1 y 7\n")
+        print("\nOpción incorrecta. Se espera un número entre 1 y 8\n")
 

@@ -11,4 +11,4 @@ while not verificacion:
     mostrar_diccionario(menu)
     valor = int(input("\nElija una opción: "))
     comprobar_opcion(valor)
-    verificacion = (valor == 7)
+    verificacion = (valor == 8)
