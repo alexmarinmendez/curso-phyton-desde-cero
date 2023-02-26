@@ -1,31 +1,33 @@
-from utils.crud_utils import agregar, eliminar, editar, mostrar, cargar_mock, buscar
+from utils.crud_utils import ProfesorManager
 
-def mostrar_diccionario(diccionario: dict):
-    """Imprime el menú de opciones en consola
+class UI:
+    def mostrar_diccionario(self, diccionario: dict):
+        """Imprime el menú de opciones en consola
 
-    Args:
-        diccionario (dict): Diccionario con el menú de opciones
-    """
-    for x, y in diccionario.items():
-        print(f"  [{x}]: --> {y}")
-    print("\n++++++++++++++++++++++++++++++++++++++++++")
+        Args:
+            diccionario (dict): Diccionario con el menú de opciones
+        """
+        for x, y in diccionario.items():
+            print(f"  [{x}]: --> {y}")
+        print("\n++++++++++++++++++++++++++++++++++++++++++")
 
-def comprobar_opcion(opcion):
-    if opcion>=1 and opcion<=8:
-        if opcion == 1:
-            agregar()
-        elif opcion == 2:
-            eliminar()
-        elif opcion == 3:
-            editar()
-        elif opcion == 4:
-            mostrar()
-        elif opcion == 5:
-            cargar_mock()
-        elif opcion == 6:
-            buscar()
-        elif opcion == 7:
-            pass
-    else:
-        print("\nOpción incorrecta. Se espera un número entre 1 y 8\n")
+    def comprobar_opcion(self, opcion):
+        if opcion>=1 and opcion<=8:
+            profeManager = ProfesorManager()
+            if opcion == 1:
+                profeManager.agregar()
+            elif opcion == 2:
+                profeManager.eliminar()
+            elif opcion == 3:
+                profeManager.editar()
+            elif opcion == 4:
+                profeManager.mostrar()
+            elif opcion == 5:
+                profeManager.cargar_mock()
+            elif opcion == 6:
+                profeManager.buscar()
+            elif opcion == 7:
+                pass
+        else:
+            print("\nOpción incorrecta. Se espera un número entre 1 y 8\n")
 
