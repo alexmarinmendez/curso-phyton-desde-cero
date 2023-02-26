@@ -2,6 +2,7 @@ from mock.datos_mock import profesores_mock
 from utils.data_utils import profesores
 from classes.profesor import Profesor
 import time
+
 def agregar():
     """Registra un profesor en la base de datos
     """
@@ -51,7 +52,6 @@ def mostrar():
     """Imprime la lista de profesores registrados
     """
     print("\nLista de profesores...")
-    
     for x,y  in profesores.items():
         print(x,y)
     print("Fin de la lista de profesores.\n")
@@ -68,36 +68,11 @@ def buscar():
     input("Press <ENTER> to continue...")
 
 def cargar_mock():
-    """Añade datos de prueba a la base de datos
+    """Añade datos de prueba (mock) a la base de datos (diccionario de profesores)
     """
-    #pretendo que los datos de prueba se agreguen al diccionario (base de datos)
-    #pero no funciona. Parece que 'profesores' lo tomara como variable local solo de esta funcion
-    # print(type(profesores_mock))
     print("Cargando datos...")
-    # print(type(profesores))  #aquí me imprime los datos de prueba, pero no los datos agregados durante la ejecución del programa
     time.sleep(2)
-    #una posible solución: intento recorrer el diccionario de datos de ejemplo y asignarlo uno a uno al diccionario de profesores
-    #pero ya no sé mas como hacerlo
-
     for x,y  in profesores_mock.items():
         profesores[x]=y
-    # print(profesores, "printeando profesores")
-    # Solución
-
-    # for x,y  in profesores_mock.items():
-        # print(type(y))
-        
-        # profesores[x]={
-        #     'Nombres': y.nombres,
-        #     'Apellidos': y.apellidos, 
-        #     'DNI':y.dni, 
-        #     'Nacionalidad': y.nacionalidad, 
-        #     'Cantidad de horas trabajadas': y.cant_horas,
-        #     'Cotizacion': y.cotizacion, 
-        #     'Estado': y.activo
-        #     }
-        # print(x,y)
     print("Se han cargado los datos!")
-    
-    # print(profesores, "printeando profesores")
     input("Press <ENTER> to continue...")
