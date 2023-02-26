@@ -19,7 +19,7 @@ class ProfesorManager:
         input("Press <ENTER> to continue...")
 
     def eliminar(self):
-        """Dar de baja un profesor. Cambia el atributo 'activo' a False para indicar que ya no se le asignará cursos
+        """Dar de baja un profesor. Cambia el atributo 'activo' a False para indicar que ya no se le asignará cursos. Solo se puede dar de baja un profesor si la cantidad de horas trabajadas es igual a 0 (liquidación realizada)
         """
         print("\nDar de baja un profesor...")
         dni = input("Ingrese DNI del profesor que desea DAR DE BAJA: ")
