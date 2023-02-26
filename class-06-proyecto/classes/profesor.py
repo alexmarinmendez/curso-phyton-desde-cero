@@ -1,3 +1,4 @@
+# from persona import Persona
 from classes.persona import Persona
 
 class Profesor(Persona):
@@ -27,9 +28,21 @@ class Profesor(Persona):
                 Contizacion /hora: USD {self.cotizacion}\n \
                 Cant. de horas trabajadas: {self.cant_horas}\n \
                 Estado: {self.activo}\n"
-
-if (__name__ == "__main__"):
+    
+    def datos_dict(self):
+        return{
+                'Nombres': self.nombres,
+                'Apellidos': self.apellidos,
+                'DNI': self.dni,
+                'Nacionalidad': self.nacionalidad,
+                'Contizacion /hora: USD': self.cotizacion,
+                'Cant. de horas trabajadas': self.cant_horas,
+                'Estado': self.activo
+        }
+if __name__ == "__main__":
     print("Módulo profesor")
     
     profesor = Profesor("Alex", "Marin Mendez", "18205786", "Peruana", 41.50)
-    print(profesor)
+    ver = profesor
+    print(ver.datos_dict())
+
