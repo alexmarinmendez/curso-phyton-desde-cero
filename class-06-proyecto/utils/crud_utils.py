@@ -72,7 +72,7 @@ def cargar_mock():
     """
     print("Cargando datos...")
     time.sleep(2)
-    for x,y  in profesores_mock.items():
-        profesores[x]=y
+    for x,y in profesores_mock.items():
+        profesores[x]= Profesor(y['nombres'], y['apellidos'], y['dni'], y['nacionalidad'], y['cotizacion'])
     print("Se han cargado los datos!")
     input("Press <ENTER> to continue...")

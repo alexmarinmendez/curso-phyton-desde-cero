@@ -1,9 +1,5 @@
-from classes.profesor import Profesor
-
-#datos de ejemplo
-
 profesores_mock = {
-    'D10123456': Profesor('Elizabeth', 'Bianchi', 'D10123456', 'Argentina', 26.9),
-    'D20123456': Profesor('Fidenzio', 'Mazzi', 'D20123456', 'Argentina', 21.4),
-    'D30123456': Profesor('Andrea', 'Pinto', 'D30123456', 'Argentina', 22.0)
+    'D10123456': { 'nombres': 'Elizabeth', 'apellidos': 'Bianchi', 'dni': 'D10123456', 'nacionalidad': 'Argentina', 'cotizacion': 26.9 },
+    'D20123456': { 'nombres': 'Fidenzio', 'apellidos': 'Mazzi', 'dni': 'D20123456', 'nacionalidad': 'Argentina', 'cotizacion': 21.4 },
+    'D30123456': { 'nombres': 'Andrea', 'apellidos': 'Pinto', 'dni': 'D30123456', 'nacionalidad': 'Argentina', 'cotizacion': 22.0 },
 }
