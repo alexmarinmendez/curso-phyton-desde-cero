@@ -23,9 +23,12 @@ class ProfesorManager:
         """
         print("\nDar de baja un profesor...")
         dni = input("Ingrese DNI del profesor que desea DAR DE BAJA: ")
-        profesor = Profesor(profesores[dni].nombres, profesores[dni].apellidos, profesores[dni].dni, profesores[dni].nacionalidad, profesores[dni].cotizacion, profesores[dni].cant_horas, False)
-        profesores[dni] = profesor
-        print("BAJA registrada!\n")
+        if (profesores[dni].cant_horas == 0):
+            profesor = Profesor(profesores[dni].nombres, profesores[dni].apellidos, profesores[dni].dni, profesores[dni].nacionalidad, profesores[dni].cotizacion, profesores[dni].cant_horas, False)
+            profesores[dni] = profesor
+            print("BAJA registrada!\n")
+        else:
+            print("ERROR: No se puede dar de baja un profesor que tiene horas pendientes por liquidar.")
         input("Press <ENTER> to continue...")
 
     def editar(self):
