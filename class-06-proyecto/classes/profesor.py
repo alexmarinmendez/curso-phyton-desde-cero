@@ -29,16 +29,6 @@ class Profesor(Persona):
                 Cant. de horas trabajadas: {self.cant_horas}\n \
                 Estado: {self.activo}\n"
     
-    def datos_dict(self):
-        return{
-                'Nombres': self.nombres,
-                'Apellidos': self.apellidos,
-                'DNI': self.dni,
-                'Nacionalidad': self.nacionalidad,
-                'Contizacion /hora: USD': self.cotizacion,
-                'Cant. de horas trabajadas': self.cant_horas,
-                'Estado': self.activo
-        }
 if __name__ == "__main__":
     print("Módulo profesor")
     
